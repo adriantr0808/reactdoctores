@@ -5,6 +5,7 @@ import TablaDoctores from './Doctores/TablaDoctores';
 import InsertarDoctores from './Doctores/InsertarDoctores';
 import ModificarDoctores from './Doctores/ModificarDoctores';
 import EliminarDoctores from './Doctores/EliminarDoctores';
+import AumentarSalario from './Doctores/AumentarSalario';
 export default class Router extends Component {
     render() {
         return (
@@ -24,6 +25,12 @@ export default class Router extends Component {
                         render={props => {
                             var id = props.match.params.id;
                             return (<EliminarDoctores iddoc={id} />)
+                        }}
+                    />
+                     <Route exact path='/aumentarsalario/:especialidad'
+                        render={props => {
+                            var esp = props.match.params.especialidad;
+                            return (<AumentarSalario especialidad={esp} />)
                         }}
                     />
                 </Switch>
