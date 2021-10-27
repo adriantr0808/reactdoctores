@@ -34,7 +34,7 @@ export default class InsertarDoctores extends Component {
             salario: sal
         }
 
-        var request = '/api/Doctoes';
+        var request = '/api/Doctores';
         var url = Global.urldoctores + request;
         axios.post(url, doc).then(res => {
 
