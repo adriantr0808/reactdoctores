@@ -15,7 +15,8 @@ export default class ModificarDoctores extends Component {
     //doctor para los values de los input
     state = {
         doctor: [],
-        status: false
+        status: false,
+        statusmModificado: false
     }
 
     buscarDoctor = () => {
@@ -51,7 +52,7 @@ export default class ModificarDoctores extends Component {
         var url = Global.urldoctores + request;
         axios.put(url, doc).then(res => {
             this.setState({
-                status: true
+                statusmModificado: true
             })
         });
     }
@@ -61,7 +62,7 @@ export default class ModificarDoctores extends Component {
     }
 
     render() {
-        if (this.state.status == true) {
+        if (this.state.statusmModificado == true) {
             return (<Redirect to='/'></Redirect>)
         }
         return (

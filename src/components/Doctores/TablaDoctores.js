@@ -25,11 +25,11 @@ export default class TablaDoctores extends Component {
     componentDidMount = () => {
         this.cargarDoctores();
     }
-
+   
     render() {
         return (
-            <div>
-                <h1>Tabla doctores</h1>
+            <div className='container'>
+                <h1 className='m-5'>Tabla doctores</h1>
                 <table className='table table-dark table-stripped'>
                     <thead>
                         <tr>
@@ -50,7 +50,8 @@ export default class TablaDoctores extends Component {
                                 <td>{doc.especialidad}</td>
                                 <td>{doc.salario}</td>
                                 <td>
-                                    <NavLink className='btn btn-warning' to={'/modificardoctores/' + doc.idDoctor}>Modificar</NavLink>
+                                    <NavLink className='btn btn-warning m-2' to={'/modificardoctores/' + doc.idDoctor}>Modificar</NavLink>
+                                    <NavLink  className='btn btn-danger' to={'/eliminardoctores/'+doc.idDoctor}>X</NavLink>
                                 </td>
                             </tr>)
                         })}

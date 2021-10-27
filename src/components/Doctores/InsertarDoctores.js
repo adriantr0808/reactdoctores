@@ -52,7 +52,7 @@ export default class InsertarDoctores extends Component {
         }
         return (
             <div>
-                <h1 className='m-4'>Insertar Doctores</h1>
+                <h1 className='m-5'>Insertar Doctores</h1>
                 <form onSubmit={this.insertarDoctor} style={{ width: '500px', display: 'table', margin: 'auto' }}>
                     <div className='mb-3 form-group row'>
                         <label>Introducir Id de doctor: </label>

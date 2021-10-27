@@ -3,7 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MenuDoctores from './Doctores/MenuDoctores';
 import TablaDoctores from './Doctores/TablaDoctores';
 import InsertarDoctores from './Doctores/InsertarDoctores';
-import ModificarDoctores from './Doctores/ModificarDoctores'
+import ModificarDoctores from './Doctores/ModificarDoctores';
+import EliminarDoctores from './Doctores/EliminarDoctores';
 export default class Router extends Component {
     render() {
         return (
@@ -17,6 +18,12 @@ export default class Router extends Component {
                         render={props => {
                             var id = props.match.params.id;
                             return (<ModificarDoctores iddoc={id} />)
+                        }}
+                    />
+                    <Route exact path='/eliminardoctores/:id'
+                        render={props => {
+                            var id = props.match.params.id;
+                            return (<EliminarDoctores iddoc={id} />)
                         }}
                     />
                 </Switch>
