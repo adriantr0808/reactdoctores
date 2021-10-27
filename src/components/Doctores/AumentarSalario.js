@@ -37,7 +37,7 @@ export default class AumentarSalario extends Component {
                 <h1 className='m-5'>Aumentar Salario</h1>
                 <form onSubmit={this.aumentoSalarioCat} style={{ width: '500px', display: 'table', margin: 'auto' }}>
                     <div className='mb-3 form-group row'>
-                    <label>Introducir aumento de salario a la especialidad: </label>
+                    <label>Introducir aumento de salario a la especialidad <span className='fs-5 fw-bold'> {this.props.especialidad} </span>: </label>
                     <input type='number' className='form-control' ref={this.aumentoRef} />
                     </div>
                     <button className='btn btn-success m-1'>Aumentar Salario</button>
